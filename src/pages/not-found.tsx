@@ -6,25 +6,31 @@ import notFound from "../images/not-found.png";
 
 function NotFound() {
   return (
-    <div className='not-found'>
-      <div className='not-found-img'>
-        <img src={notFound} alt='not found' />
+    <div className="not-found">
+      <div className="not-found-img">
+        <img
+          src={notFound}
+          alt="not found"
+        />
       </div>
-      <div className='not-found-info'>
+      <div className="not-found-info">
         <h1>Oops! </h1>
         <h2>We couldn't find that page.</h2>
         <h3>Maybe you can find what you need here?</h3>
         <nav>
-          <ul>
+          <ul className="not-found-a">
             <li>
-              <Link to='/'>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to='/about'>About</Link>
+              <Link to="/about">About</Link>
+            </li>
+            {/* <li>
+              <Link to="/profile">Profile</Link>
             </li>
             <li>
-              <Link to='/profile'>Profile</Link>
-            </li>
+              <Link to="/user">User</Link>
+            </li> */}
           </ul>
         </nav>
       </div>

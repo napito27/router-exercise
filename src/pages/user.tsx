@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-function Profile() {
+function User() {
+  const { id } = useParams();
+
+  const userId = id === ":id" ? "" : id;
+
   return (
     <div className="card">
       <nav className="links">
@@ -16,13 +20,15 @@ function Profile() {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/user/:id">User</Link>
+            <Link to="/profile">Profile</Link>
           </li>
         </ul>
       </nav>
-      <h1>Profile component</h1>
+      <h1>User Component</h1>
+
+      <div className="user-info">{id && <span>User id: {userId}</span>}</div>
     </div>
   );
 }
 
-export default Profile;
+export default User;
